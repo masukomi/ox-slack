@@ -1,15 +1,27 @@
+THIS IS A FORK. [[https://github.com/titaniumbones/ox-slack][The original repo]] seems to be in a semi-abandoned state.
+
+The =community= branch of this repo contains most of the community's improvements
+to this tool.
+
+
 * Org Slack format exporter
 
 This is a simple exporter backend for [[https://orgmode.org/][Emacs org-mode]], derived from the builtin markdown exporter & its derived backend [[https://github.com/larstvei/ox-gfm][ox-gfm.el]].  It produces simple text output suitable for pasting into a [[https://slack.com/][Slack]] client.  It works like most export backends, with two main differences:
 - at present, *this exporter is not added to the export dispatcher*. It's hard to see when it would be useful to make slack-formatted files.  Instead,
-- this package provides the interactive function ~org-slack-export-to-clipboard-as-slack~, which copies the region to the kill-ring in slack format. From there it should be easy to paste the resultant text into your slack client.  
+- this package provides the interactive function ~org-slack-export-to-clipboard-as-slack~, which copies the region to the kill-ring in slack format. From there it should be easy to paste the resultant text into your slack client.
 - on the slack side, you can quickly apply the formatting by pressing Ctrl Shift F (Linux/Windows) or ⌘ Shift F (Mac).
 
-Since slack syntax is much poorer than Org's, I've made some arbitrary choices about how to degrade it. Headlines are exported as *bolded text* on their own lines, for instance.  
+Since slack syntax is much poorer than Org's, I've made some arbitrary choices about how to degrade it. Headlines are exported as *bolded text* on their own lines, for instance.
 
-There are probably lots of improvements possible. Please file issues in the Github repo or discuss in the org-mode mailing list. 
+There are probably lots of improvements possible. Please file issues in the Github repo or discuss in the org-mode mailing list.
 
- 
-* Melpa
 
-Now available in MELPA! Install with ~package-install~ or just ~(use-package ox-slack)~
+* Installation
+If you're using the [[https://github.com/radian-software/straight.el#readme][straight.el package manager]] you can get the community changes with this invocation.
+
+#+begin_src elisp
+(package! ox-slack
+  :recipe (:host github :repo "masukomi/ox-slack" :branch "community"))
+#+end_src
+
+*The original* is available via MELPA. Install it with ~package-install~ or just ~(use-package ox-slack)~
