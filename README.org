@@ -1,7 +1,5 @@
-THIS IS A FORK. [[https://github.com/titaniumbones/ox-slack][The original repo]] seems to be in a semi-abandoned state.
-
-The =community= branch of this repo contains most of the community's improvements
-to this tool.
+Note: this is a fork that incorporates all known community enhancements.
+[[https://github.com/titaniumbones/ox-slack][The original repo]] seems to be in a semi-abandoned state.
 
 
 * Org Slack format exporter
@@ -21,7 +19,7 @@ If you're using the [[https://github.com/radian-software/straight.el#readme][str
 
 #+begin_src elisp
 (package! ox-slack
-  :recipe (:host github :repo "masukomi/ox-slack" :branch "community"))
+  :recipe (:host github :repo "masukomi/ox-slack" :branch "main"))
 #+end_src
 
-*The original* is available via MELPA. Install it with ~package-install~ or just ~(use-package ox-slack)~
+*The original* version (without community enhancements) is available via MELPA. Install it with ~package-install~ or just ~(use-package ox-slack)~
